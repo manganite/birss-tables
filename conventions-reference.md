@@ -690,42 +690,64 @@ the c-tensor symbol classes, for polar/axial tensors of even and odd rank.
 
 ### Parenthesized Group Symbols and Rotated Axis Settings
 
-Some entries in Table 7's "Associated classical group A" column (and the tensor symbols
-derived from them) are written in parentheses — e.g. `(m2m)`, `(-4m2)`, `(-62m)`. A
-parenthesized symbol denotes the **same abstract group** as the unparenthesized version
-of the same name, but **referred to a non-standard axis orientation** in the crystal
-coordinate frame. Here is why this arises and what it means in practice.
+Parenthesized group symbols appear in three places in Table 7:
 
-**Why it arises.** For each black-and-white magnetic group M, the associated group A is
-built algebraically as `A = H ∪ (−c₁)H`, where H is the subgroup of M's unprimed
-spatial operations and c₁ is the spatial part of one of M's time-reversed elements. This
-construction uses M's operations as they stand in M's crystal coordinate frame — it does
-not automatically re-orient the result to match the standard axis conventions of the
-Hermann–Mauguin symbol. The group A produced may therefore have its symmetry axes
-(2-fold rotations, mirror normals) pointing in non-standard directions within the crystal
-frame. For example, for M = `2'm'm`, the A constructed from M's elements is abstractly
-identical to mm2 (C₂v), but its 2-fold axis ends up oriented along **y** rather than
-along **z** (as the standard `mm2` symbol assumes). Birss writes this as `(m2m)` to
-signal: *same abstract group, non-standard axis orientation in the crystal frame*.
+1. **Column 2** (the magnetic point group itself): three rows — `(2'm'm)`, `(-4'm2')`,
+   `(-6'2m')`.
+2. **Columns 3–4** (associated classical groups A and B): four distinct classical group
+   symbols — `(m2m)`, `(-4m2)`, `(-42m)`, `(-62m)`.
+3. **Columns 5–12** (tensor symbols): any symbol derived from a parenthesized group in
+   columns 2–4 is itself written in parentheses, e.g. `(J_m)`, `(R_n)`.
 
-**Why it matters.** Tensor components are tied to the fixed crystal axes (x, y, z). The
-group `mm2` with its 2-fold along z and `(m2m)` with its 2-fold along y suppress
-*different* sets of tensor components, even though both have the same abstract symmetry
-and the same symbol class letter (D) in Table 4a. For the purpose of looking up the
-symbol class — the only use of columns 3–4 in Table 7 — the parenthesized and
-unparenthesized versions are **equivalent** (both give the same letter), so the
-parenthesization can be treated as a harmless flag. If you ever need the explicit
-component-by-component tensor form (rather than just the symbol class), you would need
-to permute the x, y, z labels to account for the rotated orientation.
+In every case, a parenthesized symbol denotes the **same abstract group** as the
+unparenthesized version of the same name, but **in a non-standard axis orientation**
+within the crystal coordinate frame.
 
-**The four parenthesized classical group symbols that appear in Table 7's A/B columns (columns 3–4):**
+**Why it arises in columns 3–4 (A and B).** For each black-and-white magnetic group M,
+the associated group A is built algebraically as `A = H ∪ (−c₁)H`, where H is the
+subgroup of M's unprimed spatial operations and c₁ is the spatial part of one of M's
+time-reversed elements. This construction inherits M's crystal coordinate frame — it
+does not re-orient the result to match A's standard Hermann–Mauguin axis convention. The
+group A produced may therefore have its symmetry axes pointing in non-standard directions.
+For example, for M = `2'm'm`, the A constructed from M's elements is abstractly identical
+to mm2 (C₂v), but its 2-fold axis ends up along **y** rather than **z** (as the standard
+`mm2` symbol assumes). Birss writes this as `(m2m)`.
 
-| Parenthesized | Standard equivalent | What differs |
-|---------------|--------------------|-|
-| `(m2m)` | `mm2` (C₂v) | 2-fold along y instead of z |
-| `(-4m2)` | `-42m` (D₂d) | 2-fold axes along face diagonals vs. coordinate axes |
-| `(-42m)` | `-42m` (D₂d) | alternative setting (same group, axes swapped) |
-| `(-62m)` | `-6m2` (D₃h) | 2-fold axes in the rotated hexagonal frame |
+**Why it arises in column 2.** The three parenthesized magnetic groups in column 2 are
+genuine magnetic point groups, but expressed in a non-standard axis orientation within
+their crystal system — the same phenomenon, now affecting the magnetic group symbol
+itself rather than a derived classical group.
+
+**Propagation to tensor symbols (columns 5–12).** Whenever a symbol-class letter in
+columns 5–12 is derived from a parenthesized group symbol in columns 2–4, it inherits
+the parentheses. This is purely a bookkeeping flag; the letter itself (J, R, etc.) is
+unchanged.
+
+**Practical effect.** Tensor components are tied to the fixed crystal axes, so a group
+in a non-standard orientation genuinely suppresses *different* specific components than
+the standard-orientation group — e.g. `mm2` (2-fold along z) and `(m2m)` (2-fold along
+y) zero out different index combinations. However, the **symbol class letter** is the
+same for both, so for the purpose of Table 4a lookups — the main use of Table 7 — a
+parenthesized symbol is treated as fully equivalent to its unparenthesized counterpart.
+Only a component-level analysis (going beyond the symbol class to read specific entries
+in Tables 4b–4f) would require accounting for the axis permutation.
+
+**Reference: parenthesized classical groups in A/B columns:**
+
+| Symbol | Abstract group | Non-standard feature |
+|--------|---------------|----------------------|
+| `(m2m)` | mm2 (C₂v) | 2-fold along y instead of z |
+| `(-4m2)` | -42m (D₂d) | one of the two standard settings of D₂d |
+| `(-42m)` | -42m (D₂d) | the other standard setting of D₂d, in non-standard crystal-frame orientation |
+| `(-62m)` | -6m2 (D₃h) | alternate setting of D₃h (-6m2 vs. -62m) |
+
+**Reference: parenthesized magnetic groups in column 2:**
+
+| Symbol | Abstract group | Rows |
+|--------|---------------|------|
+| `(2'm'm)` | 2'm'm (C₂v with time reversal) | 16 |
+| `(-4'm2')` | -4'm2' (D₂d with time reversal) | 37 |
+| `(-6'2m')` | -6'2m' (D₃h with time reversal) | 71 |
 
 ### The Time-Reversal Operator and Primed Operations
 - **1'** = the time-reversal (antisymmetry) operator (Birss Ch. 3, §2; eq. 3.15a–3.16b).
