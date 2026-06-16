@@ -718,7 +718,7 @@ parenthesization can be treated as a harmless flag. If you ever need the explici
 component-by-component tensor form (rather than just the symbol class), you would need
 to permute the x, y, z labels to account for the rotated orientation.
 
-**The four parenthesized groups that appear in Table 7:**
+**The four parenthesized classical group symbols that appear in Table 7's A/B columns (columns 3–4):**
 
 | Parenthesized | Standard equivalent | What differs |
 |---------------|--------------------|-|
