@@ -222,7 +222,7 @@ Primed matrices σ'(N) denote the same matrix σ(N) combined with time reversal 
 Composing these two generates all 6 symmetry operations of the group (1, two `±3_z`
 rotations, and three `2⊥` axes).
 
-**Example:** For class **6/mmm** (D₆h, hexagonal, highest symmetry), Table 3 lists
+**Example:** For class **6/mmm** (D<sub>6h</sub>, hexagonal, highest symmetry), Table 3 lists
 **four** generators — σ(1), σ(2), σ(3), σ(6) — this is the book's own worked example,
 equation (2.19):
 - σ(1) = [-1] (inversion)
@@ -430,7 +430,7 @@ reduce the count from 10 to 5, 6, or 3 depending on their physical constraints.
 ### Worked Example: Polar Rank-2 Tensor in Class 2/m
 
 This example carries the procedure all the way through to a Table 4d row, for a
-smaller (rank-2) case. Table 3 lists class **2/m** (C₂h) with generators **σ(1), σ(3)**:
+smaller (rank-2) case. Table 3 lists class **2/m** (C<sub>2h</sub>) with generators **σ(1), σ(3)**:
 
 $$\sigma(1) = \begin{pmatrix} -1 & 0 & 0 \\ 0 & -1 & 0 \\ 0 & 0 & -1 \end{pmatrix}, \qquad \sigma(3) = \begin{pmatrix} -1 & 0 & 0 \\ 0 & -1 & 0 \\ 0 & 0 & 1 \end{pmatrix}$$
 
@@ -468,7 +468,7 @@ columns `xx, yy, zz, xy, yx, xz(2), yz(2)` — exactly the reduced form derived 
 
 - In class **2** (C₂): relation $\sigma = -\sigma(2)$ (for example)
 - In class **m** (C_s): relation $\sigma = \sigma(1)$ (mirror plane)
-- In class **2/m** (C₂h): σ(1) and σ(3) are generating matrices
+- In class **2/m** (C<sub>2h</sub>): σ(1) and σ(3) are generating matrices
 
 **Consequence**: Polar tensors of even rank are equal in class **2** and **m**; axial tensors of odd rank are equal in these classes.
 
@@ -710,7 +710,7 @@ time-reversed elements. This construction inherits M's crystal coordinate frame 
 does not re-orient the result to match A's standard Hermann–Mauguin axis convention. The
 group A produced may therefore have its symmetry axes pointing in non-standard directions.
 For example, for M = `2'm'm`, the A constructed from M's elements is abstractly identical
-to mm2 (C₂v), but its 2-fold axis ends up along **y** rather than **z** (as the standard
+to mm2 (C<sub>2v</sub>), but its 2-fold axis ends up along **y** rather than **z** (as the standard
 `mm2` symbol assumes). Birss writes this as `(m2m)`.
 
 **Why it arises in column 2.** The three parenthesized magnetic groups in column 2 are
@@ -736,18 +736,18 @@ in Tables 4b–4f) would require accounting for the axis permutation.
 
 | Symbol | Abstract group | Non-standard feature |
 |--------|---------------|----------------------|
-| `(m2m)` | mm2 (C₂v) | 2-fold along y instead of z |
-| `(-4m2)` | -42m (D₂d) | one of the two standard settings of D₂d |
-| `(-42m)` | -42m (D₂d) | the other standard setting of D₂d, in non-standard crystal-frame orientation |
-| `(-62m)` | -6m2 (D₃h) | alternate setting of D₃h (-6m2 vs. -62m) |
+| `(m2m)` | mm2 (C<sub>2v</sub>) | 2-fold along y instead of z |
+| `(-4m2)` | -42m (D<sub>2d</sub>) | one of the two standard settings of D<sub>2d</sub> |
+| `(-42m)` | -42m (D<sub>2d</sub>) | the other standard setting of D<sub>2d</sub>, in non-standard crystal-frame orientation |
+| `(-62m)` | -6m2 (D<sub>3h</sub>) | alternate setting of D<sub>3h</sub> (-6m2 vs. -62m) |
 
 **Reference: parenthesized magnetic groups in column 2:**
 
 | Symbol | Abstract group | Rows |
 |--------|---------------|------|
-| `(2'm'm)` | 2'm'm (C₂v with time reversal) | 16 |
-| `(-4'm2')` | -4'm2' (D₂d with time reversal) | 37 |
-| `(-6'2m')` | -6'2m' (D₃h with time reversal) | 71 |
+| `(2'm'm)` | 2'm'm (C<sub>2v</sub> with time reversal) | 16 |
+| `(-4'm2')` | -4'm2' (D<sub>2d</sub> with time reversal) | 37 |
+| `(-6'2m')` | -6'2m' (D<sub>3h</sub> with time reversal) | 71 |
 
 ### The Time-Reversal Operator and Primed Operations
 - **1'** = the time-reversal (antisymmetry) operator (Birss Ch. 3, §2; eq. 3.15a–3.16b).
