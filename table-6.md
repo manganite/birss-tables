@@ -19,8 +19,8 @@ up its row in Table 7.
 
 The first block of Table 6, on printed page 91 (scanned PDF pages 55-56), covers the triclinic and monoclinic magnetic point groups. The book uses the same overall structure as Table 3, with the magnetic point-group symbol, the classical subgroup, the symmetry operators of the magnetic group, and the generating matrices listed in separate columns. In this transcription, inversion is written with `-` and time reversal with `'`.
 
-**Notation and derivation**: see `conventions-reference.md` §12 for the time-reversal prime notation
-(including the prime-placement rule for grouped terms `n(m')`, not `n'(m)`), and §13 for the
+**Notation and derivation**: see `conventions-reference.md` §13 for the time-reversal prime notation
+(including the prime-placement rule for grouped terms `n(m')`, not `n'(m)`), and §14 for the
 `M = H ∪ (G\H)'` formula used to derive/verify the "Symmetry operators" column for the
 black-and-white (primed) rows from Table 3.
 
@@ -128,7 +128,7 @@ with time-reversal `R`=`1'` itself a symmetry operator), and the 58 additional (
 primed) magnetic groups `𝓜` (type III). This table lists the 90 rows comprising `𝒢` (32, "Classical
 subgroup" = `-`) and `𝓜` (58); the 32 grey groups `𝒢′` are omitted, since for each of them the
 i-tensor is identical to the same-named `𝒢` row and every c-tensor vanishes identically (see
-`conventions-reference.md` §11 and §14, rule (a)).
+`conventions-reference.md` §12 and §15, rule (a)).
 
 **2026-06 verification pass (complete)**: All 90 rows have been cross-checked column-by-column
 (Classical subgroup International/Shubnikov, Symmetry operators, Generating matrices of subgroup,

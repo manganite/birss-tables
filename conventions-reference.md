@@ -1,14 +1,14 @@
 # Birss: Conventions and Definitions Reference
 
-**Source**: Compiled from full OCR extraction of scanned PDF pages 10–37 (printed book pages 1–55) of *Birss Symmetry & Magnetism komplett.pdf*, combined with transcribed Tables 3–4f and standard international crystallographic conventions. Sections 12–13 and the Table 6/7 cross-references additionally draw on Birss Chapter 3 (magnetic point groups, time-reversal/priming notation) via the transcribed `table-6.md`/`table-7.md`, not directly from the pages 10–37 OCR. Section 14 draws directly on Birss Chapter 2, §7 and Chapter 3, §5.
+**Source**: Compiled from full OCR extraction of scanned PDF pages 10–37 (printed book pages 1–55) of *Birss Symmetry & Magnetism komplett.pdf*, combined with transcribed Tables 3–4f and standard international crystallographic conventions. Sections 13–14 and the Table 6/7 cross-references additionally draw on Birss Chapter 3 (magnetic point groups, time-reversal/priming notation) via the transcribed `table-6.md`/`table-7.md`, not directly from the pages 10–37 OCR. Section 15 draws directly on Birss Chapter 2, §7 and Chapter 3, §5.
 
 **Content Extracted**: 
 - Scanned PDF pages 10–22 (printed pages 1–25): Introductory material, symbol definitions, single crystal structure
 - Scanned PDF pages 23–37 (printed pages 26–55): Symmetry operations classification, generating matrices definitions, tensor form derivation procedures, and all 32 crystal classes reference diagram (Fig. 2.6)
-- Chapter 3 (via Tables 6–7): Time-reversal (priming) notation for magnetic point groups, and the i-tensor/c-tensor symbol-class extension of Table 4a's scheme (§12, §13, and the "Extension to Magnetic Point Groups" part of §11)
+- Chapter 3 (via Tables 6–7): Time-reversal (priming) notation for magnetic point groups, and the i-tensor/c-tensor symbol-class extension of Table 4a's scheme (§13, §14, and the "Extension to Magnetic Point Groups" part of §12)
 - Chapter 2, §7 (printed pp. 71–73) and Chapter 3, §5 (printed pp. 122–124): "Null Property
   Tensors: 'Forbidden' Effects" — which tensor properties are identically zero in which
-  (magnetic) crystal classes (§14)
+  (magnetic) crystal classes (§15)
 
 ---
 
@@ -108,7 +108,7 @@ operations" column — e.g. Table 3's class `2` lists operation `2_z` and genera
 | σ(8) | [-4_z] | $\begin{pmatrix}0&-1&0\\1&0&0\\0&0&-1\end{pmatrix}$ | –4 roto-inversion about z |
 | σ(9) | (cyclic) | $\begin{pmatrix}0&1&0\\0&0&1\\1&0&0\end{pmatrix}$ | 3-fold rotation about the [111] body diagonal (cyclic permutation x→y→z→x) |
 
-Primed matrices σ'(N) denote the same matrix σ(N) combined with time reversal (see §12).
+Primed matrices σ'(N) denote the same matrix σ(N) combined with time reversal (see §13).
 
 **Example:** For class **32** (D₃, trigonal), Table 3 lists generators **σ(2), σ(6)**:
 - σ(2) = [2_y]: a 2-fold axis perpendicular to the principal axis (Table 3's `3(2⊥)` operations)
@@ -125,7 +125,7 @@ equation (2.19):
 - σ(3) = [2_z]
 - σ(6) = [3_z]
 
-Composing these generates all 24 symmetry operations of 6/mmm. See §5 for how this
+Composing these generates all 24 symmetry operations of 6/mmm. See §6 for how this
 generator set is used to derive a tensor's reduced form.
 
 **Relation to Point Group Symbols:** The generating matrices provide the actual mathematical implementation of the symmetry operations denoted by Hermann–Mauguin and Schoenflies symbols.
@@ -229,7 +229,83 @@ Notation emphasizing the presence of inversion symmetry; uses **dots**, **colons
 
 ---
 
-## 5. Deriving Tensor Forms: Systematic Procedure
+## 5. Property Tensor Types: Polar/Axial and i-/c-Tensors
+
+### Polar Tensors and Axial Tensors (Pseudotensors)
+
+Source: Birss Ch. 2, §2 (scanned PDF page 32, printed page 45), eqs. (2.11)–(2.14).
+
+Under a change of coordinate axes described by transformation matrix $l_{ij}$, the components of a
+**polar tensor** of rank $m$ transform as:
+$$d_{ijk\ldots n} = l_{ip}\,l_{jq}\,l_{kr}\cdots l_{ns}\;d_{pqr\ldots s} \tag{2.11/2.12}$$
+An **axial tensor** (also called a **pseudotensor**) transforms with an additional factor of
+$|l| = \det(l)$:
+$$d_{ijk\ldots n} = |l|\;l_{ip}\,l_{jq}\,l_{kr}\cdots l_{ns}\;d_{pqr\ldots s} \tag{2.13/2.14}$$
+
+For **proper rotations** ($\det(l) = +1$), polar and axial tensors are indistinguishable — they obey
+the same transformation rule. The difference appears only under **improper operations** (inversion,
+reflections; $\det(l) = -1$): an axial tensor component picks up an extra sign flip relative to the
+corresponding polar component.
+
+**Immediate consequence** (Birss, immediately after eq. 2.14): axial tensors of **even** rank and
+polar tensors of **odd** rank vanish identically in every centrosymmetric crystal class (the 11
+classes containing the inversion), because applying the inversion ($|l|=-1$) simultaneously forces
+$d = d$ and $d = -d$. This is the centrosymmetric nullity rule used throughout §8 (crystal-class
+reference) and §15 (null property tensors).
+
+**Common examples by rank:**
+
+| Rank | Polar | Axial |
+|------|-------|-------|
+| 1 (vector) | Electric field **E**, polarisation **P**, position **r** | Magnetic field **H**, magnetic moment **m**, angular momentum **L** |
+| 2 | Dielectric permittivity $\varepsilon_{ij}$, thermal conductivity $\kappa_{ij}$ | Optical gyration tensor $g_{ij}$ |
+| 3 | Piezoelectric coefficients $d_{ijk}$ | Piezomagnetic coefficients $Q_{ijk}$ |
+| 4 | Elastic stiffness $c_{ijkl}$ | Piezo-optical tensor $p_{ijkl}$ |
+
+In the derivation procedure (§6), eq. (2.12) is applied for polar tensors and eq. (2.14) for axial
+tensors when imposing the crystal symmetry constraints. Tables 4b–4f give the allowed forms for
+both types, with separate columns (or separate table-4x entries for odd-rank tensors) covering
+polar and axial cases.
+
+### i-Tensors and c-Tensors (Time-Reversal Behaviour)
+
+Source: Birss Ch. 3, §3 (scanned PDF page 61, printed page 102).
+
+For magnetically ordered crystals described by the 122 magnetic point groups (Table 6/7), property
+tensors are additionally classified by their behaviour under the **time-reversal operator** R
+(= `1'`):
+
+- An **i-tensor** ("**i**nvariant"): components are *unchanged* under R,
+  $d_{ijk\ldots} \xrightarrow{R} +\,d_{ijk\ldots}$. Examples: electric permittivity, elastic
+  stiffness, thermal conductivity.
+- A **c-tensor** ("**c**hange of sign"): components *all flip sign* under R,
+  $d_{ijk\ldots} \xrightarrow{R} -\,d_{ijk\ldots}$. Examples: piezomagnetic tensor, magnetic
+  susceptibility (as a property relating magnetic field to magnetisation in a magnetically ordered
+  material).
+
+This classification combines with polar/axial to give **eight categories** (2 × 2 × 2),
+each with its own Table 7 column (columns 5–12):
+
+| Col | Category |
+|-----|----------|
+| 5 | i-tensor, polar, even rank *m* |
+| 6 | i-tensor, axial, even rank *m* |
+| 7 | i-tensor, polar, odd rank *n* |
+| 8 | i-tensor, axial, odd rank *n* |
+| 9 | c-tensor, polar, even rank *m* |
+| 10 | c-tensor, axial, even rank *m* |
+| 11 | c-tensor, polar, odd rank *n* |
+| 12 | c-tensor, axial, odd rank *n* |
+
+The i-/c-tensor distinction is only meaningful for magnetically ordered crystals. For **classical
+point groups** (𝒢, type I) and **grey groups** (𝒢′, type II — time-reversal itself a symmetry),
+all c-tensors vanish identically. The full treatment — how to read i-/c-tensor symbol classes from
+Table 7, and the nullity rules (a)–(e) governing when specific tensor types vanish — is in §12 and
+§15.
+
+---
+
+## 6. Deriving Tensor Forms: Systematic Procedure
 
 ### General Method (§5 of Birss Chapter 2)
 
@@ -327,7 +403,7 @@ Rather than deriving tensors from scratch, the independent components for each r
 
 Each **row** represents a crystal class; each **column** shows the reduced form of that component in that class (0 = vanishes, variable symbol = survives and is independent).
 
-## 6. Tensor Component Notation (Tables 4b–4f)
+## 7. Tensor Component Notation (Tables 4b–4f)
 
 ### Grouped Component Notation
 The tables use **subscript counts** in parentheses to denote **equivalent components under the group**:
@@ -349,7 +425,7 @@ The tables use **subscript counts** in parentheses to denote **equivalent compon
 
 ---
 
-## 7. Crystal Classes Reference (32 Point Groups)
+## 8. Crystal Classes Reference (32 Point Groups)
 
 All 32 crystallographic point groups are organized in **Fig. 2.6** (scanned PDF page 30, printed pages 40–41) by crystal system:
 
@@ -368,11 +444,11 @@ Each class has:
 **Centrosymmetrical Classes** (containing inversion center –1):
 - –1, 2/m, mmm, 4/mmm, –3m, 6/mmm, m3, m3m
 - In these classes, polar tensors of odd rank vanish and axial tensors of even rank
-  vanish (see §5, "Tensor Equalities Between Crystal Classes")
+  vanish (see §6, "Tensor Equalities Between Crystal Classes")
 
 ---
 
-## 8. Key Findings from Pages 23–37 (printed pages 26–55)
+## 9. Key Findings from Pages 23–37 (printed pages 26–55)
 
 ### Symmetry Operation Enumeration
 
@@ -426,7 +502,7 @@ Tables 6 and 7.
 
 ---
 
-## 9. Axis and Index Conventions
+## 10. Axis and Index Conventions
 
 ### Index Ordering in Tensors
 - Indices follow **x₁, x₂, x₃** (or **x, y, z**) in left-to-right order in the crystal frame
@@ -449,7 +525,7 @@ relates to Table 4a's "Orientation of reference axes" column.
 
 ---
 
-## 10. Notation Summary Table
+## 11. Notation Summary Table
 
 | Symbol/Notation | Meaning | Context | Reference |
 |---|---|---|---|
@@ -476,7 +552,7 @@ relates to Table 4a's "Orientation of reference axes" column.
 
 ---
 
-## 11. Summary and Cross-References
+## 12. Summary and Cross-References
 
 ### Complete Reference Structure in Birss
 
@@ -523,7 +599,7 @@ sets, according to how the time-reversal operator `R` (= `1'`) enters the group:
   distinguished only by typeface (non-bold) — these are the groups usually called the
   **"grey" groups** elsewhere in the literature.
 - **𝓜** (58, "additional magnetic groups", black-and-white/primed): `R` occurs only
-  combined with some of `𝒢`'s operators, via `M = H ∪ (G\H)'` (§13).
+  combined with some of `𝒢`'s operators, via `M = H ∪ (G\H)'` (§14).
 
 `32 + 32 + 58 = 122`.
 
@@ -533,7 +609,7 @@ operator, so:
 - its i-tensor symbol class is identical to `𝒢`'s (the same-named, already-present
   type-I row of Table 7), and
 - **every c-tensor is identically null** (a c-tensor changes sign under `R`, but
-  `R ∈ 𝒢′` forces `d = -d`, i.e. `d = 0`) — this is rule **(a)** of §14.
+  `R ∈ 𝒢′` forces `d = -d`, i.e. `d = 0`) — this is rule **(a)** of §15.
 
 A separate `𝒢′` row would therefore just repeat `𝒢`'s i-tensor columns with all
 c-tensor columns blank, so Birss omits it.
@@ -555,7 +631,7 @@ lookup procedure.
 
 **i-tensors vs. c-tensors**: for a magnetic point group with International symbol
 `column 2`, let `G` = `unprime(column 2)` (the parent classical point group obtained by
-dropping all primes, as in §13). A property tensor that is **invariant under time
+dropping all primes, as in §14). A property tensor that is **invariant under time
 reversal** ("i" for *invariant*) has the same form as it would in the classical group
 `G` — its symbol class is simply **Table 4a's entry for `G`**. A property tensor that
 **changes sign under time reversal** ("c" for *change of sign*, e.g. tensors relating
@@ -567,7 +643,7 @@ the c-tensor symbol classes, for polar/axial tensors of even and odd rank.
 
 ---
 
-## 12. Time-Reversal (Priming) Notation — Tables 6 and 7
+## 13. Time-Reversal (Priming) Notation — Tables 6 and 7
 
 ### The Time-Reversal Operator and Primed Operations
 - **1'** = the time-reversal (antisymmetry) operator (Birss Ch. 3, §2; eq. 3.15a–3.16b).
@@ -584,7 +660,7 @@ leading roto-inversion marker (`-`, `±-`) but **before** any trailing axis subs
 - `-1` (inversion) primes as `-1'`.
 
 ### Prime Placement on Grouped Operations `n(m...)`
-In a grouped term `n(m...)` (see §4 and §7 for the `n(m)` / `n(m⊥)` grouping notation), `n` is a
+In a grouped term `n(m...)` (see §4 and §8 for the `n(m)` / `n(m⊥)` grouping notation), `n` is a
 **multiplicity count**, not an operation, and can never itself carry a prime. The prime belongs on
 the operation symbol `m` inside the parentheses, in the **same position** as for ungrouped
 operations (immediately after `m`'s rotation-order digit, before any trailing `⊥` or sign suffix):
@@ -599,7 +675,7 @@ operations (immediately after `m`'s rotation-order digit, before any trailing `�
 | `6(2')` | `6'(2)` |
 
 This rule applies uniformly to the trigonal/hexagonal `n(m⊥)`/`n(-m⊥)` families and the cubic
-`n(m)`/`n(-m)`/`n(±m)`/`n(±-m)` families (§7).
+`n(m)`/`n(-m)`/`n(±m)`/`n(±-m)` families (§8).
 
 ### Magnetic Shubnikov Notation
 Primes appear analogously in Shubnikov symbols, marking the primed generator/coset, e.g. `4':2`,
@@ -607,7 +683,7 @@ Primes appear analogously in Shubnikov symbols, marking the primed generator/cos
 
 ---
 
-## 13. Deriving Black-and-White Magnetic Point Group Operation Lists: M = H ∪ (G\H)'
+## 14. Deriving Black-and-White Magnetic Point Group Operation Lists: M = H ∪ (G\H)'
 
 For the primed rows of Table 6 (those whose "Classical subgroup (International)" entry, column 4,
 is not `-`), the "Symmetry operators" column (column 6) can be derived — and cross-checked —
@@ -619,7 +695,7 @@ purely from Table 3, independent of the row's symbol primes or its generating-ma
 - **H** = column 4, "Classical subgroup (International)" — an index-2 subgroup of G. H's operation
   list is likewise Table 3's entry for H.
 - **M** (column 6) = `H ∪ (G\H)'`, i.e. all of H's operations unprimed, plus every operation in G
-  but not in H, each combined with time reversal (primed per §12 above).
+  but not in H, each combined with time reversal (primed per §13 above).
 
 ### Sanity Check
 `unprime(M)` (drop every prime from M) must reproduce G's full Table 3 operation multiset exactly,
@@ -658,7 +734,7 @@ For magnetic point group `4'32'` (Table 6, H = `23`):
 
 ---
 
-## 14. Null Property Tensors: "Forbidden" Effects
+## 15. Null Property Tensors: "Forbidden" Effects
 
 This section summarizes Birss's discussion of which tensor properties are identically
 zero ("forbidden" effects) in which crystal classes: Chapter 2, §7 (printed pp. 71–73)
@@ -668,7 +744,7 @@ magnetic point groups.
 ### Classical Point Groups (Ch. 2, §7)
 
 **Rank > 2**: For tensors of rank greater than the third, the *only* restriction
-imposed by spatial symmetry is the centrosymmetric rule already given in §5/§7 above:
+imposed by spatial symmetry is the centrosymmetric rule already given in §6/§8 above:
 in the 11 centrosymmetric classes (`-1, 2/m, mmm, 4/m, 4/mmm, -3, -3m, 6/m, 6/mmm, m3,
 m3m`), polar tensors of odd rank and axial tensors of even rank vanish identically;
 otherwise no general nullity is imposed by symmetry. The same rule covers general
@@ -706,7 +782,7 @@ demonstrate pyromagnetism experimentally; Zocher and Török [1953] then argued 
 pyromagnetism is universally "forbidden" by symmetry. Their argument rests on dividing
 property tensors, by their behavior under time-inversion, into **i-tensors**
 (invariant under time reversal) and **c-tensors** (change sign under time reversal —
-see §11). Since magnetic moment is time-antisymmetric, pyro- and piezomagnetism are
+see §5). Since magnetic moment is time-antisymmetric, pyro- and piezomagnetism are
 characterized by c-tensors, and Zocher and Török assumed *all* crystals are
 time-symmetric, so that *all* c-tensors must vanish. Birss's rebuttal — and the
 motivation for the magnetic-point-group treatment below — is that this assumption
@@ -717,7 +793,7 @@ time-symmetric, so their c-tensors need not vanish, and the rank-1/rank-2 result
 
 ### Magnetic Point Groups (Ch. 3, §5)
 
-For a magnetic point group, every property tensor is classified (§11) as an
+For a magnetic point group, every property tensor is classified (§5) as an
 **i-tensor** (Table 7 columns 5–8, depending only on the parent classical group `G`)
 or a **c-tensor** (Table 7 columns 9–12, derived from the "Associated classical
 groups" A and B). For *static* properties, Birss gives five nullity rules:
