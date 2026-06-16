@@ -664,6 +664,10 @@ The material in **Chapter 2** (scanned PDF pages 10–37, printed pages 1–55) 
 
 The entire point of providing generating matrices is that they determine which tensor components survive in each class through the systematic constraint procedure outlined in **Section 6**. Tables 4a–4f are the **solutions** to these constraint equations, pre-computed for reference.
 
+---
+
+## 13. Magnetic Point Groups: Classification, Tables 6–7, and Time-Reversal Notation
+
 ### The 122 Magnetic Point Groups: 𝒢, 𝒢′, and 𝓜
 
 Birss Ch. 3, §2 (printed pp. 84–85) divides the 122 magnetic point groups into three
@@ -691,13 +695,13 @@ operator, so:
 A separate `𝒢′` row would therefore just repeat `𝒢`'s i-tensor columns with all
 c-tensor columns blank, so Birss omits it.
 
-### Extension to Magnetic Point Groups: Tables 6 and 7
+### Tables 6 and 7: Structure and Lookup
 
 **Table 6** lists the 90 magnetic point groups `𝒢` (32, type I, unprimed) and `𝓜` (58,
 black-and-white) described above, using the same `σ(N)`/`σ'(N)` generating-matrix
-notation (see **Sections 12–13** for the time-reversal/priming notation specific to
-Table 6). The remaining 32 magnetic point groups — the grey groups `𝒢′` — are not
-listed (see above).
+notation (see the time-reversal/priming notation subsections below for how primed
+operations work in Table 6). The remaining 32 magnetic point groups — the grey groups
+`𝒢′` — are not listed (see above).
 
 **Table 7** extends Table 4a's 21-letter tensor-symbol-class scheme (`A_m`...`U_m`,
 `A_n`...`U_n`) to the 90 magnetic point groups, giving each one an i-tensor and a
@@ -717,10 +721,6 @@ the magnetic point group's two "Associated classical group" columns (A and B, Ta
 columns 3–4) via the cross-formula documented in table-7.md's "Notes and Status"
 section. Table 7's columns 5–8 tabulate the i-tensor symbol classes and columns 9–12
 the c-tensor symbol classes, for polar/axial tensors of even and odd rank.
-
----
-
-## 13. Time-Reversal (Priming) Notation — Tables 6 and 7
 
 ### The Time-Reversal Operator and Primed Operations
 - **1'** = the time-reversal (antisymmetry) operator (Birss Ch. 3, §2; eq. 3.15a–3.16b).
