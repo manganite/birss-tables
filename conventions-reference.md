@@ -283,6 +283,9 @@ tensors are additionally classified by their behaviour under the **time-reversal
   susceptibility (as a property relating magnetic field to magnetisation in a magnetically ordered
   material).
 
+Birss uses **m** for even rank (m ∈ {0, 2, 4} → Tables 4b, 4d, 4f) and **n** for odd
+rank (n ∈ {1, 3} → Tables 4c, 4e) throughout Tables 4a–4f and Table 7.
+
 This classification combines with polar/axial to give **eight categories** (2 × 2 × 2),
 each with its own Table 7 column (columns 5–12):
 
@@ -306,6 +309,24 @@ Table 7, and the nullity rules (a)–(e) governing when specific tensor types va
 ---
 
 ## 6. Deriving Tensor Forms: Systematic Procedure
+
+### Neumann's Principle
+
+Source: Birss Ch. 2, §2 (scanned PDF page 32, printed page 44).
+
+**Neumann's Principle** states that every physical property of a crystal must be invariant
+under all symmetry operations of the crystal's point group. Mathematically, this means
+that if $\mathbf{g}$ is any symmetry operation of the crystal class (one of the elements
+of the point group), then the property tensor $d_{ij\ldots}$ must satisfy:
+
+- For a **polar** tensor: $d_{ij\ldots} = O_{ip}O_{jq}\cdots d_{pq\ldots}$ (eq. 2.12)
+- For an **axial** tensor: $d_{ij\ldots} = |g|\,O_{ip}O_{jq}\cdots d_{pq\ldots}$ (eq. 2.14)
+
+for every generating matrix $O$ of the class (§2). These constraint equations are the
+direct mathematical expression of Neumann's Principle. Imposing them for all generators
+simultaneously — the systematic procedure of §5 of Birss Ch. 2 — eliminates or equates
+components and determines the reduced tensor form. Tables 4a–4f give the pre-computed
+solutions for all 32 crystal classes and all ranks 0–4.
 
 ### General Method (§5 of Birss Chapter 2)
 
@@ -332,7 +353,20 @@ $$\sigma(1) = \begin{pmatrix} -1 & 0 & 0 \\ 0 & -1 & 0 \\ 0 & 0 & -1 \end{pmatri
 
 Since σ(1) is an inversion (determinant = –1), all **axial** fourth-rank tensors vanish identically in this class. For **polar** tensors, applying each matrix to the general rank-4 tensor produces sets of constraints (detailed in Birss equations 2.20–2.22).
 
-The result is that the independent components reduce to a minimal set, determined by which coefficients remain after all constraints are applied.
+The result for the **polar** rank-4 tensor in 6/mmm is given by **Table 4f, row P4**
+(symbol class P_m from Table 4a: class `6/mmm` → P_m → row P4 at m=4). The full form
+— Birss equation (2.23), printed p. 67 — has **10 independent components**. The
+key structural features are: all components with an odd number of z-indices vanish;
+`xxxx` and `yyyy` are equal (hexagonal constraint `xxxx = yyxx + xyyx + yxyx`); the
+non-zero components lie in the groups `zzzz`, `xxyy/yyxx`, and `xxzz/zzxx/yyzz/zzyy`.
+
+Lookup chain: class `6/mmm` → Table 4a → P_m → row P4 in Table 4f.
+
+This is the crystal-symmetry result alone. Additional equalities arise from the
+**physical index symmetry** of specific rank-4 tensors — see **'### Intrinsic
+Symmetry and Particularization'** below for how elastic stiffness and related rank-4
+tensors in 6/mmm reduce the count from 10 to 5, 6, or 3 depending on their physical
+constraints.
 
 ### Worked Example: Polar Rank-2 Tensor in Class 2/m
 
@@ -403,7 +437,78 @@ Rather than deriving tensors from scratch, the independent components for each r
 
 Each **row** represents a crystal class; each **column** shows the reduced form of that component in that class (0 = vanishes, variable symbol = survives and is independent).
 
+### Intrinsic Symmetry and Particularization
+
+Source: Birss Ch. 2, §6 (scanned PDF pages 43–44, printed pages 67–70).
+
+**Intrinsic symmetry** refers to the index symmetry that a property tensor possesses by
+virtue of the *physical nature* of the property it describes, independently of the
+crystal's point-group symmetry. Examples: the elastic stiffness tensor $a_{ijkl}$ (eq.
+2.25) is symmetric in each index pair because energy is a quadratic form in the symmetric
+strain tensor $E_{ij} = E_{ji}$; the piezomagnetic tensor $Q_{ijk}$ is symmetric in the
+last two indices because $E_{jk} = E_{kj}$.
+
+**Particularization** is the process of applying these physical index symmetries on top
+of the crystal-symmetry restrictions already encoded in Tables 4a–4f. Tables 4a–4f give
+the most general form consistent with the point group alone — particularization then
+imposes further equalities among the surviving components, reducing the count of
+independent components below what the table gives.
+
+**Worked example — class 6/mmm, rank-4 polar tensors** (Birss printed pp. 68–69):
+
+Starting from the crystal-symmetry form (Table 4f, row P4, Birss eq. 2.23) with 10
+independent components:
+
+| Tensor | Physical index symmetry | Resulting independent count | Independent components |
+|--------|------------------------|-----------------------------|------------------------|
+| $a_{ijkl}$ (elastic energy $U = a_{ijkl}E_{ij}E_{kl}$) | $E_{ij}=E_{ji}$ → pair swap $a_{ijkl}=a_{klij}$; each pair symmetric $a_{ijkl}=a_{jikl}=a_{ijlk}$ | **5** | $a_{1111},\,a_{3333},\,a_{1122},\,a_{1133},\,a_{2323}$ |
+| $c_{ijkl}$ (pair $(ij)$ symmetric, pairs NOT interchangeable: $c_{ijkl}\ne c_{klij}$) | $c_{ijkl}=c_{jikl}$, $c_{ijkl}=c_{ijlk}$ only | **6** | $c_{1111},\,c_{3333},\,c_{1133},\,c_{3311},\,c_{2323},\,c_{3223}$ |
+| $b_{ijkl}$ (all four indices fully interchangeable) | $b_{ijkl}$ fully symmetric under all permutations of $i,j,k,l$ | **3** | $b_{1122},\,b_{1133},\,b_{3333}$ |
+
+The same crystal-symmetry starting point (row P4, 10 independent) yields three different
+physical results depending on the intrinsic symmetry of the specific tensor. The
+$a_{ijkl}$ case reproduces the **5 independent hexagonal elastic constants** familiar
+from elasticity theory (c₁₁=c₂₂, c₃₃, c₁₂, c₁₃=c₂₃, c₄₄=c₅₅, with c₆₆=(c₁₁−c₁₂)/2).
+
+Birss notes (printed p. 70) that a systematic tabulation of particularized tensor forms
+for all intrinsic symmetry types appears in Nye [1955].
+
 ## 7. Tensor Component Notation (Tables 4b–4f)
+
+Birss uses **m** for even rank and **n** for odd rank throughout Tables 4a–4f and
+Table 7: even rank m ∈ {0, 2, 4} maps to Tables 4b, 4d, 4f respectively; odd rank
+n ∈ {1, 3} maps to Tables 4c, 4e. See §5 (i-/c-tensor subsection) and Table 4a's
+"How to use this table" for the full rank-mapping and lookup procedure.
+
+### Symbol Classes A–U
+
+Table 4a assigns each of the 32 crystal classes a **symbol class** — a letter A through
+U — separately for each of the four tensor-type columns (polar/axial × even-rank-m /
+odd-rank-n). There are **21 distinct symbol classes** (the first 21 letters of the
+alphabet), fewer than 32 because many crystal classes share the same tensor form:
+
+| Crystal system | Symbol letters used |
+|----------------|-------------------|
+| Triclinic | A |
+| Monoclinic | B, C |
+| Orthorhombic | D, E |
+| Tetragonal | F, G, H, I, J |
+| Trigonal | K, L, M |
+| Hexagonal | N, O, P, Q, R |
+| Cubic | S, T, U |
+
+- The **subscript suffix** (`_m` or `_n`) identifies even vs. odd rank only. The same
+  letter in different ranks always refers to the same set of crystal classes — e.g. `H_m`
+  (tetragonal 422/4mm/-42m/4/mmm, polar even) at rank 2 → row H2 in Table 4d, at rank 4
+  → row H4 in Table 4f.
+- A **dash** (`–`) in Table 4a's entry means the tensor type vanishes entirely in that
+  class (applying the constraint equations gives zero for all components).
+- The symbol class for hexagonal classes 622, 6mm, -6m2, 6/mmm is **P** for polar and
+  **P** for axial-odd (columns 1 and 4 in Table 4a); axial-even tensors vanish in 6/mmm
+  (Table 4a entry `–`).
+- The lookup chain is: **point group → Table 4a → symbol class → Table 4b–4f row →
+  independent components**. See Table 4a's "How to use this table" section for the full
+  procedure.
 
 ### Grouped Component Notation
 The tables use **subscript counts** in parentheses to denote **equivalent components under the group**:
@@ -468,37 +573,9 @@ The **rotation-inversion method is generally preferred** because:
 - **–2** = Equivalent to a mirror plane perpendicular to the 2-fold axis
 - **–3, –4, –6** = Distinct improper rotation axes combining the respective rotations with inversion
 
-### Generating Matrices Composition
-
-For a point group with generators σ(i), the full group is obtained by:
-- Taking all possible products (compositions): σ(i)·σ(j), σ(i)·σ(i), etc.
-- Continuing until no new matrices appear
-
-**Example relations** (from equations 2.5 in Birss):
-$$\sigma^2 = -\sigma \cdot \sigma', \quad \sigma \cdot \sigma' \cdot \sigma = -\sigma', \quad \sigma^2 = \sigma'^2$$
-
-These multiplication rules define the algebraic structure of the point group.
-
-### Tensor Derivation from Constraints
-
-Birss section 4 demonstrates the systematic procedure:
-
-1. Write the constraint $\mathbf{d} = \sigma \cdot \mathbf{d}$ (for proper rotations) or $\mathbf{d} = -\sigma \cdot \mathbf{d}$ (for inversions)
-2. For the generating matrices of a class, substitute each into the constraint
-3. Solve for which coefficients must be equal or zero
-4. The solution set gives the independent components
-
-**For example (class 6/mmm, rank 4)**:
-- Applying σ(1) (inversion): axial tensors vanish → only polar form
-- Applying σ(2), σ(3): further restrictions reduce components to independent set
-- Final result: specific number of independent coefficients (listed in Table 4f)
-
-### Reference Materials
-
-See **Section 11** ("Summary and Cross-References") for the full cross-reference
-structure linking Table 3, Table 4a, Tables 4b–4f, and (for magnetic point groups)
-Tables 6 and 7.
-
+For the tensor derivation procedure (how generating matrices constrain tensor components)
+see **§6**; for axis and index conventions see **§10**; for the full cross-reference
+structure linking all tables see **§12**.
 
 ---
 
@@ -575,17 +652,17 @@ The material in **Chapter 2** (scanned PDF pages 10–37, printed pages 1–55) 
    and rank mapping.
 5. To see the resulting **tensor components**, go to the matching row (e.g. `H2`, `F4`)
    in the appropriate **Table 4b–4f** (rank 0–4)
-6. To understand the **tensor notation** (why components are grouped, what numbers mean), use **Section 6** of this reference
+6. To understand the **tensor notation** (why components are grouped, what numbers mean), use **Section 7** of this reference
 
 **To understand symmetry operations in a specific class:**
 
 1. Look at **Table 3, column 6** for the symmetry operations list
 2. Use **Sections 2 and 4** to interpret each operation symbol (rotation vs. roto-inversion, meanings of ⊥, etc.)
-3. Reference **Section 9** for axis conventions in that class
+3. Reference **Section 10** for axis conventions in that class
 
 ### Key Insight: Generating Matrices → Tensor Forms
 
-The entire point of providing generating matrices is that they determine which tensor components survive in each class through the systematic constraint procedure outlined in **Section 5**. Tables 4a–4f are the **solutions** to these constraint equations, pre-computed for reference.
+The entire point of providing generating matrices is that they determine which tensor components survive in each class through the systematic constraint procedure outlined in **Section 6**. Tables 4a–4f are the **solutions** to these constraint equations, pre-computed for reference.
 
 ### The 122 Magnetic Point Groups: 𝒢, 𝒢′, and 𝓜
 
