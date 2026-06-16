@@ -1,0 +1,10 @@
+# Source PDFs (large binaries — keep alongside the repo but don't version them)
+*.pdf
+
+# OCR scratch files (disposable working material, see CLAUDE.md)
+.tmp_ocr/
+
+# OS / editor cruft
+.DS_Store
+__pycache__/
+*.py[cod]
