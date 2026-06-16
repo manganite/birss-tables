@@ -34,6 +34,15 @@
     orthonormal `x,y,z` frame is related to, but not identical to, the oblique
     crystallographic axes `c, a₁, a₂` (120° apart) — see Birss Fig. 1.1b / eq. (1.4)
     for that relation.
+    > **Note — two misprints in Birss Table 3 (corrected)**:
+    > - **6mm**: The book reads σ(4), σ(4), σ(6) — the first σ(4) is a misprint of
+    >   σ(3). The repeated σ(4) = [-2_y] cannot generate a 6-fold axis; the correct
+    >   set is σ(3), σ(4), σ(6). Table 6 confirms this.
+    > - **-6m2**: The book reads σ(2), σ(5), σ(6) — σ(2) is a misprint of σ(4).
+    >   σ(2) = [2_y] implies y = 2-fold axis, contradicting Table 4a's `3//z, -2//y`
+    >   (y = mirror normal). The correct set is σ(4), σ(5), σ(6). Table 6 confirms this.
+    >
+    > Both corrected in table-3.md and table-6.md.
   - **Orthorhombic**: `x`, `y`, `z` are the three mutually perpendicular 2-fold axes
     (or mirror normals) — Table 4a: `2//x, 2//y` (the third, `2//z`, is implied).
   - **Cubic**: `x`, `y`, `z` lie along the cube edges — the three equivalent 4-fold or
@@ -66,6 +75,62 @@ Describes the **symmetry elements** of the point group using a standardized conv
 **Abbreviated vs. Full Notation:**
 - Abbreviated form omits redundant generators (e.g., `mmm` instead of `m.m.m`)
 - Full form explicitly lists all principal symmetry elements
+
+### Positional Convention: Which HM Symbol Position Refers to Which Axis
+
+Each position in a Hermann–Mauguin group name systematically maps to a specific crystal
+direction. This is verified directly from Table 4a's "Orientation of reference axes"
+column: every secondary direction listed there as `2//y` or `-2//y` corresponds exactly
+to the second symbol in the HM name. The mapping depends on the crystal system:
+
+**Monoclinic** (one symbol): refers to **z** (the unique axis). There is no secondary
+direction, so no y specified.
+
+**Orthorhombic** (three symbols): positions refer to **x, y, z** in that order:
+- First symbol → element along x
+- Second symbol → element along y (Table 4a: `2//x, **2//y**`)
+- Third symbol → element along z
+
+**Tetragonal, Trigonal, Hexagonal** (one to three symbols): positions refer to **z
+(primary), y (secondary), diagonal (tertiary)**:
+- First symbol → the principal n-fold axis along **z**
+- **Second symbol → the secondary element along y** — either a 2-fold rotation (`2//y`,
+  generator σ(2)) or a mirror with normal along y (`-2//y`, generator σ(4))
+- Third symbol (where present) → element at diagonal directions in the horizontal plane
+  (bisector directions between the primary crystallographic a-axes)
+
+The second symbol in the HM name therefore **always refers to y** for tetragonal,
+trigonal, and hexagonal groups.
+
+**Cubic** (two or three symbols): **exception** — positions refer to **[100]-type
+(cube-edge), [111]-type (body-diagonal), and [110]-type (face-diagonal)** directions:
+- First symbol → elements along the [100]-type cube edges (x, y, z are equivalent)
+- Second symbol → elements along the [111]-type body diagonals — the 3-fold or -3 axes.
+  **This is NOT y** (y is a cube edge, not a body diagonal).
+- Third symbol (where present) → elements along [110]-type face diagonals
+
+In the cubic case Table 4a lists `2//x, 2//y` or `4//x, 4//y` because x and y are
+equivalent cube-edge directions; the second symbol "3" (or "-6") in the HM name refers
+to the body-diagonal direction, not to y specifically.
+
+**The -3m subtlety.** For -3m (D₃d), Table 3 uses σ(2) = [2_y] as the secondary
+generator, so Table 4a lists the orientation as `-3//z, 2//y` — y is the 2-fold axis.
+Yet the second symbol in "-3m" is **m** (a mirror). The resolution: because -3m contains
+both inversion σ(1) and the 2-fold σ(2), their product σ(1)·σ(2) = σ(4) = [-2_y] is
+also in the group — a vertical mirror with normal along y. So in D₃d, y is
+**simultaneously the 2-fold axis and perpendicular to a mirror**. The second symbol "m"
+correctly refers to this mirror at y; Table 4a's `2//y` records which generator was used
+to *define* y (the 2-fold), not the exhaustive list of operations at y.
+
+**-6m2 vs. 6mm.** Both groups use y as the mirror-normal direction (Table 4a: `-2//y`
+for both), so the second symbol in each is "m". They differ at the third position:
+- **-6m2** ("-6-m-**2**"): the third symbol "2" names the horizontal 2-fold axes, which
+  lie at x (perpendicular to the mirror normals at y). Generators σ(4), σ(5), σ(6):
+  σ(4) = [-2_y] defines y as the mirror normal, σ(5) = [-2_z] is the horizontal mirror,
+  and σ(6) = [3_z] is the 3-fold; the horizontal 2-folds at x are derived operations.
+- **6mm** ("6-m-**m**"): the third symbol "m" names mirrors at the 60°-bisector
+  (diagonal) directions. Generators σ(3), σ(4), σ(6): σ(4) = [-2_y] defines y as the
+  mirror normal, σ(3) = [2_z] combined with σ(6) = [3_z] yields the 6-fold axis.
 
 ### Schoenflies Notation
 Point group classification using symbols with subscripts:
@@ -232,6 +297,25 @@ equation (2.19):
 
 Composing these generates all 24 symmetry operations of 6/mmm. See §7 for how this
 generator set is used to derive a tensor's reduced form.
+
+**Generator corrections confirmed from book scans (hexagonal groups).** Two misprints
+in Birss's Table 3 were identified and corrected in table-3.md, confirmed by
+cross-referencing the book with Table 6 (the magnetic point groups table, which
+independently lists generators for the same 32 classical groups):
+
+- **6mm**: The book's Table 3 reads σ^(4), σ^(4), σ^(6) — the first σ(4) is a
+  **misprint of σ(3)**. The repeated σ(4) = [-2_y] cannot generate a 6-fold axis; the
+  correct first generator is σ(3) = [2_z]. The correct set σ(3), σ(4), σ(6) =
+  [2_z] + [-2_y] + [3_z] generates C₆v: σ(3)·σ(6) yields a C₆ rotation, σ(4)
+  provides a vertical mirror without a horizontal mirror. Table 6 confirms
+  σ^(3), σ^(4), σ^(6). Corrected in table-3.md.
+
+- **-6m2**: The Table 3 scan shows σ^(2), σ^(5), σ^(6), but Table 6 shows
+  **σ^(4), σ^(5), σ^(6)**. The σ(2) in Table 3 is a misprint of σ(4): σ(2) = [2_y]
+  is the secondary generator of the *alternate* -62m orientation (y = 2-fold axis),
+  whereas the standard -6m2 orientation requires σ(4) = [-2_y] (y = mirror normal),
+  consistent with Table 4a's `3//z, -2//y`. With σ(4) the inconsistency between Table 3
+  and Table 4a disappears entirely. Corrected in table-3.md.
 
 **Relation to Point Group Symbols:** The generating matrices provide the actual mathematical
 implementation of the symmetry operations denoted by Hermann–Mauguin and Schoenflies symbols.
