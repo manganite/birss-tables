@@ -100,7 +100,7 @@ parenthesized A, B, or column-2 group symbol.
 | Hexagonal | -6'm2' | 6mm | (-62m) | P_m | R_m | R_n | P_n | (R_m) | Q_m | Q_n | (R_n) |
 | Hexagonal | -6m'2' | -6m2 | 6mm | P_m | R_m | R_n | P_n | Q_m | R_m | R_n | Q_n |
 | Hexagonal | 6/mmm | - | - | P_m | - | - | P_n | P_m | - | - | P_n |
-| Hexagonal | 6'/mmm' | 6/mmm | (-62m) | P_m | - | - | P_n | (R_m) | - | - | (R_n) |
+| Hexagonal | 6'/m'mm' | 6/mmm | (-62m) | P_m | - | - | P_n | (R_m) | - | - | (R_n) |
 | Hexagonal | 6/mm'm' | 6/mmm | 6mm | P_m | - | - | P_n | Q_m | - | - | Q_n |
 | Hexagonal | 6/m'm'm' | 622 | 6/mmm | P_m | - | - | P_n | - | P_m | P_n | - |
 | Hexagonal | 6/m'mm | 6mm | 6/mmm | P_m | - | - | P_n | - | Q_m | Q_n | - |

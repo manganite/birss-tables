@@ -961,7 +961,7 @@ Within the 90 magnetic point groups (Table 7), two further 21-member subsets `m�
 - `m₂` = the rows of Table 7 whose c-tensor "Axial tensor of even rank m" (column 10)
   and "Polar tensor of odd rank n" (column 11) entries are *both* blank:
   `-1, 2/m, 2'/m', mmm, m'm'm, 4/m, 4'/m, 4/mmm, 4'/mmm', 4/mm'm', -3, -3m, -3m', 6/m,
-  6'/m', 6/mmm, 6'/mmm', 6/mm'm', m3, m3m, m3m'`
+  6'/m', 6/mmm, 6'/m'mm', 6/mm'm', m3, m3m, m3m'`
 - `m₃` = the rows of Table 7 whose c-tensor "Polar tensor of even rank m" (column 9)
   and "Axial tensor of odd rank n" (column 12) entries are *both* blank:
   `-1', 2/m', 2'/m, m'm'm', mmm', 4/m', 4'/m', 4/m'm'm', 4/m'mm, 4'/m'm'm, -3', -3'm',
