@@ -4,7 +4,7 @@ Source: scanned PDF pages 55-59 in `Birss Symmetry & Magnetism komplett.pdf`
 (printed book pages 91-98; the table is printed rotated by 90 degrees and spans these
 8 printed pages across 5 scanned-PDF pages)
 
-**Note**: This table lists all 122 magnetic point groups (space-time symmetry groups with time-reversal invariance). These extend the 32 classical crystallographic point groups by including the anti-unitary time-reversal operator.
+**Note**: Of the 122 magnetic point groups, this table lists only the 90 that carry independent information: the 32 classical (type I, unprimed) groups and the 58 black-and-white (type III, primed) groups. The remaining 32 "grey" (type II) groups are omitted — each is trivially derived from its classical counterpart (same i-tensor; every c-tensor vanishes identically; see `conventions-reference.md` §12 and §15, rule (a)).
 
 **How to use this table / how it connects to the others**: this table has the same
 column layout as Table 3 (point-group symbol, symmetry operators, generating matrices
