@@ -25,6 +25,12 @@ choice for D<sub>3h</sub>:
 | Hexagonal | 6, -6, 6/m, 622, 6mm, **-6m2**, 6/mmm |
 | Cubic | 23, m3, 432, -43m, m3m |
 
+**Cubic bar notation**: Birss abbreviates the bar on the 3-fold roto-inversion in
+cubic groups, writing **m3** where ITC writes **m-3** (= m3̄). This affects 6 of
+the 11 cubic symbols: m3/m-3, m3m/m-3m, and their 4 magnetic derivatives
+(m'3/m'-3', m3m'/m-3m', m'3m'/m'-3'm', m'3m/m'-3'm). Both notations refer to
+the same groups — Birss's convention is more compact; ITC's is more explicit.
+
 **D<sub>3h</sub> setting**: ITC Vol. A Table 3.2.1.4 uses **-62m** as its primary
 listing for D<sub>3h</sub>, with -6m2 described as an alternate setting. ITC
 Vol. D Table 1.5.2.3 (magnetic groups) uses **-6m2**. Birss uses **-6m2**
@@ -303,7 +309,51 @@ forms throughout.)
 For **magnetic groups**, the convention difference produces **one visible symbol
 discrepancy**: 6'/mm'm (Birss) vs 6'/mmm' (ITC).
 
-### 3.4 Tetragonal: no discrepancy
+### 3.4 Why only one discrepancy: three necessary conditions
+
+Given that the axis convention affects all trigonal and hexagonal groups, it may
+seem surprising that only a single naming discrepancy results. The reason is that
+three conditions must hold **simultaneously** for the convention difference to
+produce a visible change in the HM symbol:
+
+**Condition 1 — Identical letters in both HM positions.** When the 2nd and 3rd
+positions contain *different* letters (e.g. `m` and `2` in `-6m2`), swapping which
+set of directions maps to which position changes the symbol visibly: `-6m2`
+becomes `-62m`. This is precisely what the parenthesized entries in Table 7
+handle — `(-62m)`, `(-4m2)`, `(m2m)` flag the alternate setting. The three
+parenthesized magnetic groups in Table 7 column 2 — `(-6'2m')`, `(-4'm2')`,
+`(2'm'm)` — all have different letters in the two positions, so the swapped
+convention is encoded in the symbol itself and does not produce a naming
+discrepancy (just a parenthesization flag).
+
+In `6/mmm`, both positions contain `m` — the same letter. Swapping which set of
+directions maps to which position produces the **same parent symbol** `6/mmm`.
+The swap becomes visible only through **prime placement** on BW derivatives.
+
+**Condition 2 — A BW derivative that breaks the equivalence.** In the unprimed
+parent `6/mmm`, both positions are `m` with no primes, so the swap is invisible.
+The time-reversal primes of a BW derivative can break the symmetry between the
+two positions — one `m` becomes `m'` while the other stays `m`. But this only
+happens if the two sets of mirrors have different priming.
+
+**Condition 3 — A subgroup H with only 3-fold symmetry.** Whether the two sets
+of mirrors get different priming depends on the subgroup H. If H has 6-fold
+symmetry (H = C₆ₕ, D₆, or C₆ᵥ), the 6-fold rotation maps Set A onto Set B,
+making them equivalent — both sets are either entirely primed or entirely
+unprimed, so the prime pattern is symmetric and the swap has no effect. Only
+when H has 3-fold symmetry (H = D₃d or D₃ₕ) does H contain mirrors from one set
+but not the other, producing an asymmetric prime pattern whose representation
+depends on the axis convention.
+
+**Result:** Of the 5 BW members of the 6/mmm family, only groups 75 (H = D₃d)
+and 79 (H = D₃ₕ) satisfy all three conditions. For group 75, the additional
+prime on the horizontal mirror (`m'` after `/`) makes the two symbols
+distinguishable regardless of which vertical mirror carries the prime — both
+conventions agree on `6'/m'mm'`. For group 79, the horizontal mirror is unprimed,
+leaving the vertical mirror prime as the only distinguishing mark — and here the
+conventions disagree: `6'/mmm'` (ITC) vs `6'/mm'm` (Birss).
+
+### 3.5 Tetragonal: no discrepancy
 
 For tetragonal groups, Birss's y is along [010], which belongs to the [100]-type
 family. Both conventions assign pos.2 to this direction. The groups -42m, 4mm,
