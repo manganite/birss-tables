@@ -39,7 +39,7 @@ groups and is referenced by the other tables:
 | System | Intl. abbreviated | Full | Schoenflies | Shubnikov | Symmetry operations | Number | Generating matrices |
 |---|---|---|---|---|---|---:|---|
 | Triclinic | 1 | 1 | C<sub>1</sub> | 1 | 1 | 1 | σ(0) |
-| Triclinic | -1 | -1 | C<sub>1</sub>(S<sub>2</sub>) | -2 | 1, -1 | 2 | σ(1) |
+| Triclinic | -1 | -1 | C<sub>i</sub>(S<sub>2</sub>) | -2 | 1, -1 | 2 | σ(1) |
 | Monoclinic | 2 | 2 | C<sub>2</sub> | 2 | 1, 2_z | 2 | σ(3) |
 | Monoclinic | m | m | C<sub>s</sub>(C<sub>1h</sub>) | m | 1, -2_z | 2 | σ(5) |
 | Monoclinic | 2/m | 2/m | C<sub>2h</sub> | 2:m | 1, -1, 2_z, -2_z | 4 | σ(1), σ(3) |
