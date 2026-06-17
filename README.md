@@ -32,3 +32,5 @@ The source PDF (`Birss Symmetry & Magnetism komplett.pdf`) contains many tables 
 4. Look up that symbol class in the appropriate `table-4b` through `table-4f`.
 
 For magnetic point groups, follow the same chain starting from `table-6.md` and `table-7.md`.
+
+> **Note on the 32 "grey" groups:** The 32 Type II (grey) magnetic point groups are omitted from Tables 6 and 7 because their i-tensors are identical to the classical groups in Table 3, and their c-tensors are identically zero.
