@@ -12,6 +12,9 @@
 *.fdb_latexmk
 *.synctex.gz
 
+# Project instructions (local only)
+CLAUDE.md
+
 # OCR scratch files (disposable working material, see CLAUDE.md)
 .tmp_ocr/
 

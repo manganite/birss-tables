@@ -5,7 +5,7 @@ Markdown transcriptions of selected tables from:
 > R. R. Birss, *Symmetry and Magnetism*, North-Holland / Elsevier, 1966.
 > Free online access: [Internet Archive](https://archive.org/details/symmetrymagnetis0000robe)
 
-The source PDF (`Birss Symmetry & Magnetism komplett.pdf`) contains many tables printed rotated 90° or split across pages, making them difficult to read. This project digitises the key reference tables into clean, cross-referenced Markdown.
+This project digitises the key reference tables into clean, cross-referenced Markdown, and compares them with the corresponding tables in the International Tables for Crystallography (ITC).
 
 ---
 
@@ -14,6 +14,8 @@ The source PDF (`Birss Symmetry & Magnetism komplett.pdf`) contains many tables 
 | File | Contents |
 |---|---|
 | `conventions-reference.md` | Master reference: coordinate conventions, notation systems (HM / Schoenflies / Shubnikov), the σ(0)–σ(9) generating matrix pool, tensor type definitions (polar/axial, i-/c-tensor), and the complete cross-reference guide for all tables. **Read this first.** |
+| `birss-tables.tex` | LaTeX source compiling the transcribed tables into a single typeset document. |
+| `birss-tables.pdf` | Compiled PDF of the tables. |
 | `table-3.md` | The 32 crystallographic point groups — symmetry operations, Schoenflies / HM / Shubnikov symbols, and generating matrices. |
 | `table-4a.md` | Symbol-equivalence mapping: assigns each of the 32 point groups a letter symbol class (A–U) for each tensor type (polar/axial × even/odd rank). Gateway to Tables 4b–4f. |
 | `table-4b.md` | Tensor forms, rank 0 (scalars) across all 32 point groups. |
@@ -23,6 +25,7 @@ The source PDF (`Birss Symmetry & Magnetism komplett.pdf`) contains many tables 
 | `table-4f.md` | Tensor forms, rank 4 across all 32 point groups. |
 | `table-6.md` | The 90 magnetic point groups (32 classical + 58 black-and-white), with generating matrices including primed (time-reversal-combined) operations. |
 | `table-7.md` | Magnetic point groups mapped to i-tensor and c-tensor symbol classes (extensions of the Table 4a scheme to magnetically ordered materials). |
+| `birss-itc-comparison.md` | Comparison of Birss's tables with the corresponding International Tables for Crystallography (ITC) entries. |
 
 ## How to use
 
