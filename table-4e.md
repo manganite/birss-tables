@@ -41,3 +41,4 @@ point-group -> symbol-class lookup and the full rank-mapping explanation (n=1 ->
 ## Changelog
 
 - **2026-06-16** (`83e2abb`): Initial transcription. No changes since.
+- **2026-07-02**: Print verification — the complete table (all rows and component entries) was checked cell-by-cell against the printed Table 4e in Birss, *Symmetry and Magnetism* (1966). No transcription errors found. 4e row citations in downstream fixtures therefore need no further per-row book check, only faithful transcription from this file.
