@@ -33,3 +33,7 @@ table, m=2 -> Table 4d, m=4 -> Table 4f).
 | S0 | x |
 | T0 | x |
 | U0 | 0 |
+
+## Changelog
+
+- **2026-06-16** (`83e2abb`): Initial transcription. No changes since.

@@ -37,3 +37,7 @@ point-group -> symbol-class lookup and the full rank-mapping explanation (n=1 ->
 | S3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | xyz | xzy | xyz | xzy | xyz | xzy |
 | T3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | xyz | -xyz | xyz | -xyz | xyz | -xyz |
 | U3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | xyz | xyz | xyz | xyz | xyz | xyz |
+
+## Changelog
+
+- **2026-06-16** (`83e2abb`): Initial transcription. No changes since.

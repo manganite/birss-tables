@@ -70,3 +70,10 @@ point-group -> symbol-class lookup and the full rank-mapping explanation (m=0 ->
 | S4 | xxyy | yyxx | yyxx | xxyy | xxyy | yyxx | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | T4 | xxyy | xxyy | xxyy | xxyy | xxyy | xxyy | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | U4 | xxyy | -xxyy | -xxyy | xxyy | xxyy | -xxyy | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+
+## Changelog
+
+- **2026-06-16** (`83e2abb`): Initial transcription.
+- **2026-06-17** (`c055746`): Split into Part I (columns 1-11) and Part II (columns 12-25) for
+  readability — the 25-column single table required horizontal scrolling — matching the LaTeX
+  layout. No data changes.

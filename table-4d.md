@@ -34,3 +34,7 @@ point-group -> symbol-class lookup and the full rank-mapping explanation (m=0 ->
 | S2 | xx | xx | xx | 0 | 0 | 0 | 0 |
 | T2 | xx | xx | xx | 0 | 0 | 0 | 0 |
 | U2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+
+## Changelog
+
+- **2026-06-16** (`83e2abb`): Initial transcription. No changes since.

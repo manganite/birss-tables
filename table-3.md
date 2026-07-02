@@ -70,3 +70,13 @@ groups and is referenced by the other tables:
 | Cubic | 432 | 432 | O | 3/4 | 1, 9(2), 4(±3), 3(±4) | 24 | σ(7), σ(9) |
 | Cubic | -43m | -43m | T<sub>d</sub> | 3/-4 | 1, 3(2), 6(-2), 4(±3), 3(±-4) | 24 | σ(8), σ(9) |
 | Cubic | m3m | m3m | O<sub>h</sub> | -6/4 | 1, -1, 9(2), 9(-2), 4(±3), 4(±-3), 3(±4), 3(±-4) | 48 | σ(1), σ(7), σ(9) |
+
+## Changelog
+
+- **2026-06-16** (`83e2abb`): Initial transcription.
+- **2026-06-16** (`53a17ed`): Fixed two generator misprints inherited from the book: `6mm`
+  σ(4),σ(4),σ(6) → σ(3),σ(4),σ(6); `-6m2` σ(2),σ(5),σ(6) → σ(4),σ(5),σ(6). Confirmed by
+  cross-referencing with Table 6, which independently lists generators for the same 32 classical
+  groups.
+- **2026-06-17** (`0e05601`): Fixed a Schoenflies symbol typo for `-1`: C<sub>1</sub>(S<sub>2</sub>)
+  → C<sub>i</sub>(S<sub>2</sub>) (the subscript "i" had been misread as "1" during OCR).

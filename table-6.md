@@ -277,3 +277,20 @@ correction.
 - **Classical 32 point groups**: See Table 3
 - **Magnetic symmetry operator definition**: Birss Chapter 3, §2
 - **Time-reversal symmetry**: Birss Chapter 3, equation (3.15a)-(3.16b)
+
+## Changelog
+
+- **2026-06-16** (`83e2abb`): Initial transcription, including a comprehensive verification pass
+  (documented inline above as "2026-06 verification pass" and passes 2-4) correcting numerous
+  transcription errors across all seven crystal systems.
+- **2026-06-16** (`1541bc2`): Renumbered internal cross-references to `conventions-reference.md`
+  sections, following that document's section restructuring. No data change.
+- **2026-06-16** (`53a17ed`): Fixed 4 rows (`6mm`, `-6m2`, `6/m'mm`, `6'/mm'm`) that had inherited
+  Table 3's `6mm`/`-6m2` generator misprints.
+- **2026-06-17** (`19f7707`): Clarified the header note — the table lists 90 of the 122 magnetic
+  point groups (32 type I + 58 type III), not all 122; explains upfront that the 32 grey groups are
+  omitted.
+- **2026-07-02** (`83a37f5`): Book-scan verification (pass 5, above) corrected 5 rows: `-4'm2'`,
+  `6'22'`, `6'mm'`, `-6m'2'`, `6'/m'mm'`.
+- **2026-07-02** (`bbe2355`): Folded a standalone independent verification of the 11 trigonal rows
+  (no errors found) into this section as an inline pass note; removed the redundant standalone file.

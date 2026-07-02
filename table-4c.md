@@ -33,3 +33,7 @@ table, n=3 -> Table 4e).
 | S1 | 0 | 0 | 0 |
 | T1 | 0 | 0 | 0 |
 | U1 | 0 | 0 | 0 |
+
+## Changelog
+
+- **2026-06-16** (`83e2abb`): Initial transcription. No changes since.

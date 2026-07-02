@@ -70,3 +70,7 @@ c-tensor symbols of the 90 magnetic point groups, via the same rank mapping.
 | Cubic | 432 | 4//x, 4//y | T_m | T_m | T_n | T_n |
 | Cubic | -43m | -4//x, -4//y | T_m | U_m | U_n | T_n |
 | Cubic | m3m | 4//x, 4//y | T_m | - | - | T_n |
+
+## Changelog
+
+- **2026-06-16** (`83e2abb`): Initial transcription. No changes since.

@@ -192,3 +192,12 @@ columns 3-4 against scans of the original source, R. R. Birss, *Proc. Phys. Soc.
 `(A,B) = (-,-) -> (-3m,3m) -> (32,-3m) -> (3m,-3m)`. No errors found — all 11 rows match both the
 cross-formula and the original source. This confirms, independently of the "2026-06 pass" above
 (which covers the same rows), that the trigonal block needs no correction.
+
+## Changelog
+
+- **2026-06-16** (`83e2abb`): Initial transcription, including the paper-based rederivation and
+  book-verification pass documented inline above ("2026-06 pass").
+- **2026-06-17** (`3eccc94`): Fixed a typo, `6'/mmm'` → `6'/m'mm'`, cross-checked against Table 6's
+  correct spelling of the same group.
+- **2026-07-02** (`bbe2355`): Folded a standalone independent verification of the 11 trigonal rows
+  (no errors found) into this section as an inline pass note; removed the redundant standalone file.
