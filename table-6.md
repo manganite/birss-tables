@@ -62,7 +62,7 @@ black-and-white (primed) rows from Table 3.
 | Tetragonal | 4m'm' | 4.m' | 4 | 4 | 1, 2_z, ±4_z, -2'_x, -2'_y, -2'_xy, -2'_-xy | σ(7) | σ'(4) |
 | Tetragonal | -42m | -4.m | - | - | 1, 2_x, 2_y, 2_z, -2_xy, -2_-xy, ±-4_z | σ(2), σ(8) | - |
 | Tetragonal | -4'2m' | -4'.m' | 222 | 2:2 | 1, 2_x, 2_y, 2_z, -2'_xy, -2'_-xy, ±-4'_z | σ(2), σ(3) | σ'(8) |
-| Tetragonal | -4'm2' | -4'.m | mm2 | 2.m | 1, 2_z, -2_xy, -2_-xy, 2'_x, 2'_y, ±-4'_z | σ(3), σ(4) | σ'(8) |
+| Tetragonal | -4'm2' | -4'.m | mm2 | 2.m | 1, 2_z, -2_x, -2_y, 2'_xy, 2'_-xy, ±-4'_z | σ(3), σ(4) | σ'(8) |
 | Tetragonal | -42'm' | -4.m' | -4 | -4 | 1, 2_z, ±-4_z, 2'_x, 2'_y, -2'_xy, -2'_-xy | σ(8) | σ'(2) |
 | Tetragonal | 4/mmm | m.4:m | - | - | 1, -1, 2_x, 2_y, 2_z, 2_xy, 2_-xy, -2_x, -2_y, -2_z, -2_xy, -2_-xy, ±4_z, ±-4_z | σ(1), σ(2), σ(7) | - |
 | Tetragonal | 4'/mmm' | m.4':m | mmm | m.2:m | 1, -1, 2_x, 2_y, 2_z, -2_x, -2_y, -2_z, 2'_xy, 2'_-xy, -2'_xy, -2'_-xy, ±4'_z, ±-4'_z | σ(1), σ(2), σ(3) | σ'(7) |
@@ -90,17 +90,17 @@ black-and-white (primed) rows from Table 3.
 | Hexagonal | 6/m' | 6:m' | 6 | 6 | 1, 2_z, ±3_z, ±6_z, -1', -2'_z, ±-3'_z, ±-6'_z | σ(3), σ(6) | σ'(1) |
 | Hexagonal | 6'/m | 6':m | -6 | 3:m | 1, -2_z, ±3_z, ±-6_z, -1', 2'_z, ±-3'_z, ±6'_z | σ(5), σ(6) | σ'(1) |
 | Hexagonal | 622 | 6:2 | - | - | 1, 6(2⊥), 2_z, ±3_z, ±6_z | σ(2), σ(3), σ(6) | - |
-| Hexagonal | 6'22' | 6':2 | 32 | 3:2 | 1, 3(2⊥), ±3_z, 3(2'⊥), 2_z, ±6_z | σ(2), σ(6) | σ'(3) |
+| Hexagonal | 6'22' | 6':2 | 32 | 3:2 | 1, 3(2⊥), ±3_z, 3(2'⊥), 2'_z, ±6'_z | σ(2), σ(6) | σ'(3) |
 | Hexagonal | 62'2' | 6:2' | 6 | 6 | 1, 2_z, ±3_z, ±6_z, 6(2'⊥) | σ(3), σ(6) | σ'(2) |
 | Hexagonal | 6mm | 6.m | - | - | 1, 2_z, 6(-2⊥), ±3_z, ±6_z | σ(3), σ(4), σ(6) | - |
-| Hexagonal | 6'mm' | 6'.m | 3m | 3.m | 1, 3(-2⊥), ±3_z, 2'_z, ±6'_z, 3(-2'⊥) | σ(4), σ(6) | σ'(5) |
+| Hexagonal | 6'mm' | 6'.m | 3m | 3.m | 1, 3(-2⊥), ±3_z, 2'_z, ±6'_z, 3(-2'⊥) | σ(4), σ(6) | σ'(3) |
 | Hexagonal | 6m'm' | 6.m' | 6 | 6 | 1, 2_z, ±3_z, ±6_z, 6(-2'⊥) | σ(3), σ(6) | σ'(4) |
 | Hexagonal | -6m2 | m.3:m | - | - | 1, 3(2⊥), 3(-2⊥), -2_z, ±3_z, ±-6_z | σ(4), σ(5), σ(6) | - |
 | Hexagonal | -6'2m' | m'.3:m' | 32 | 3:2 | 1, 3(2⊥), ±3_z, -2'_z, ±-6'_z, 3(-2'⊥) | σ(2), σ(6) | σ'(5) |
 | Hexagonal | -6'm2' | m.3:m' | 3m | 3.m | 1, 3(-2⊥), ±3_z, 3(2'⊥), -2'_z, ±-6'_z | σ(4), σ(6) | σ'(5) |
-| Hexagonal | -6m'2' | m'.3:m | -6 | 3:m | 1, -2_z, ±3_z, ±-6_z, 3(2'⊥), 3(-2'⊥) | σ(5), σ(6) | σ'(2) |
+| Hexagonal | -6m'2' | m'.3:m | -6 | 3:m | 1, -2_z, ±3_z, ±-6_z, 3(2'⊥), 3(-2'⊥) | σ(5), σ(6) | σ'(4) |
 | Hexagonal | 6/mmm | m.6:m | - | - | 1, -1, 6(2⊥), 2_z, 6(-2⊥), -2_z, ±3_z, ±-3_z, ±6_z, ±-6_z | σ(1), σ(2), σ(3), σ(6) | - |
-| Hexagonal | 6'/m'mm' | m'.6':m' | -3m | -6.m | 1, -1, 3(2⊥), 3(-2⊥), ±3_z, ±-3_z, 3(2'⊥), 2'_z, 3(-2'⊥), -2'_z, ±6'_z, ±-6'_z | σ(1), σ(2), σ(6) | σ'(2) |
+| Hexagonal | 6'/m'mm' | m'.6':m' | -3m | -6.m | 1, -1, 3(2⊥), 3(-2⊥), ±3_z, ±-3_z, 3(2'⊥), 2'_z, 3(-2'⊥), -2'_z, ±6'_z, ±-6'_z | σ(1), σ(2), σ(6) | σ'(3) |
 | Hexagonal | 6/mm'm' | m'.6:m | 6/m | 6:m | 1, -1, 2_z, -2_z, ±3_z, ±-3_z, ±6_z, ±-6_z, 6(2'⊥), 6(-2'⊥) | σ(1), σ(3), σ(6) | σ'(2) |
 | Hexagonal | 6/m'm'm' | m'.6:m' | 622 | 6:2 | 1, 6(2⊥), 2_z, ±3_z, ±6_z, -1', -2'_z, ±-3'_z, ±-6'_z, 6(-2'⊥) | σ(2), σ(3), σ(6) | σ'(1) |
 | Hexagonal | 6/m'mm | m.6:m' | 6mm | 6.m | 1, 2_z, 6(-2⊥), ±3_z, ±6_z, -1', -2'_z, 6(2'⊥), ±-3'_z, ±-6'_z | σ(3), σ(4), σ(6) | σ'(1) |
@@ -233,6 +233,35 @@ of the form `n'(m...)` was corrected to `n(m'...)`, placing the prime on the ope
 69, 71, 73, 74, 75, 85, 86, 88, 89, 91, 92, 93, 95 (×2), 96 (×2), 97, 98, 99 (×2), 102 (×2), 104, 106,
 108 (×4), 109 (×3), 110 (×4). No element sets changed — this was a pure notation correction, and the
 `unprime(M) == G` sanity check from pass 3 continues to hold for all 58 rows.
+
+**2026-07 pass 5 (book-scan verification of six disputed rows; operator + generator columns)**: A
+three-way consistency audit (operator column vs. σ(N)/σ'(N) closure vs. the `birss-app`
+implementation, all 90 rows, exact eq.-2.17 matrices) flagged six rows, which were then read from
+fresh scans of the printed book pages. Fixes:
+- `-4'm2'` (bracketed/rotated row): operator column had been transcribed in the wrong axis frame —
+  `-2_xy, -2_-xy, 2'_x, 2'_y` → `-2_x, -2_y, 2'_xy, 2'_-xy`. The book's row has unitary H = `mm2`
+  with axis-aligned mirrors and primed diagonal 2-folds (confirmed by the scan, by ITC Table
+  1.5.2.3, and by the row's own σ(3), σ(4) / σ'(8), which close exactly to the corrected list).
+  Origin of the error: the pass-3 derivation embedded H = `mm2` inside the standard `-42m` frame
+  ({1, 2_z, -2_xy, -2_-xy}), but the book's row is set in the `-4m2` frame — precisely the
+  bracketed-row trap.
+- `6'22'`: two missing time-reversal primes — `2_z, ±6_z` → `2'_z, ±6'_z` (book prints both
+  underlined; also forced by the row's own H = `32`, |H| = 6).
+- `6'mm'`: additional generator `σ'(5)` → `σ'(3)` (book prints σ̲(3); σ'(5) = m'_z is impossible,
+  C6v contains no m_z).
+- `-6m'2'`: additional generator `σ'(2)` → `σ'(4)` (book prints σ̲(4); m'⊥y matches the row's
+  frame).
+- `6'/m'mm'`: additional generator `σ'(2)` → `σ'(3)` — here the transcription was faithful and the
+  **book itself misprints** σ̲(2): 2'_y collides with the unprimed 2_y ∈ H = `-3m`, and closing the
+  printed generators yields the grey group `-3m1'` rather than a type-III group. New book misprint,
+  analogous to the two documented in `conventions-reference.md`.
+- `6'/mm'm` (documentation only, no change): the book prints generators σ(2), σ(5), σ(6); the
+  transcribed σ(4), σ(5), σ(6) is the correct reading. σ(2) = 2_y would place an unprimed 2-fold on
+  y, contradicting the row's full HM `6'/m 2'/m 2/m'` (position 2 = primed 2-fold, unprimed mirror
+  ⊥y → generator σ(4) = m⊥y). Same σ(2)↔σ(4) misprint pattern as Table 3's documented `-6m2` case.
+
+After this pass, closing each row's σ(N)/σ'(N) generators reproduces its operator column exactly
+for all 90 rows (verified computationally).
 
 ## References
 
