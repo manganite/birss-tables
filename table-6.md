@@ -263,6 +263,15 @@ fresh scans of the printed book pages. Fixes:
 After this pass, closing each row's σ(N)/σ'(N) generators reproduces its operator column exactly
 for all 90 rows (verified computationally).
 
+**2026-06-30 independent verification (trigonal block, no changes)**: An independent audit of the
+11 trigonal rows (`3, -3, -3', 32, 32', 3m, 3m', -3m, -3m', -3'm', -3'm`) re-derived the six primed
+rows' Symmetry operators via `M = H ∪ (G\H)'` (§12 of `conventions-reference.md`) from Table 3, and
+additionally cross-checked the block against scans of the original source, R. R. Birss, *Proc. Phys.
+Soc.* **79**, 946 (1962), Table 2(a). No errors found — all 11 rows are internally consistent and
+match both the group-theoretic derivation and the original source. This confirms, independently of
+the "2026-06 pass 3" derivation above (which covers the same rows), that the trigonal block needs no
+correction.
+
 ## References
 
 - **Classical 32 point groups**: See Table 3

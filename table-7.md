@@ -183,3 +183,12 @@ alternate-setting spelling `(m2m)`/`(-4m2)`/`(-42m)`/`(-62m)` used) to match the
 All 90 rows now satisfy: i-tensor = Table 4a(G) with `G = unprime(column 2)` (or `G` = the group
 itself for classical rows), and for the 58 BW rows, c-tensor = cross-formula(Table4a(A),
 Table4a(B)) as defined above, with bracketing propagated per the header note.
+
+**2026-06-30 independent verification (trigonal block, no changes)**: An independent audit of the
+11 trigonal rows (`3, -3, -3', 32, 32', 3m, 3m', -3m, -3m', -3'm', -3'm`) re-computed the c-tensor
+columns (9-12) from columns 3-4 (A, B) via the cross-formula above, and additionally cross-checked
+columns 3-4 against scans of the original source, R. R. Birss, *Proc. Phys. Soc.* **79**, 946
+(1962), Table 2(a) — including the delicate ordering `-3m -> -3m' -> -3'm' -> -3'm` with
+`(A,B) = (-,-) -> (-3m,3m) -> (32,-3m) -> (3m,-3m)`. No errors found — all 11 rows match both the
+cross-formula and the original source. This confirms, independently of the "2026-06 pass" above
+(which covers the same rows), that the trigonal block needs no correction.
