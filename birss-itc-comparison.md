@@ -410,7 +410,7 @@ Birss uses short forms exclusively, which do not encode the setting.
 
 Both Birss and ITC list Shubnikov symbols for the magnetic groups (Birss Table 6
 column 3, ITC Table 1.5.2.3 column 3). The conventions are compatible: Birss's
-`m.6:m`, `m'.6':m'`, etc. follow the standard Shubnikov dot/colon system.
+`m.6:m`, `m.6':m'`, etc. follow the standard Shubnikov dot/colon system.
 Detailed comparison was limited by loss of prime superscripts in the ITC PDF
 text extraction.
 
