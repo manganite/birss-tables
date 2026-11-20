@@ -285,7 +285,8 @@ misprint)**: While the table was taken over into `symcrys` (manganite/symcrys#42
 were compared column by column with the scanned pages (2026-11-19). The International symbols of
 the groups and of their classical subgroups and the operator lists agree with the print in content.
 Seven Shubnikov entries did not. Birss underlines the element that is combined with time reversal;
-in these entries the prime stood on the wrong element or was missing:
+in these entries a prime stood on the wrong element, was superfluous or was missing, and in one an
+overbar was missing:
 - `4/mm'm'` (printed p. 94): `m.4:m'` → `m'.4:m` (book m̲·4:m), and `4/m'mm` (p. 94): `m'.4:m` →
   `m.4:m'` (book m·4:m̲). The two symbols had been exchanged.
 - `4'/m'm'm` (p. 94): `m'.4':m'` → `m.4':m'` (book m·4̲:m̲).
@@ -299,7 +300,9 @@ in these entries the prime stood on the wrong element or was missing:
 
 Independent check: with these corrections the Shubnikov symbols of all 90 rows equal those of
 ITC Vol. D (2nd ed., 2013), Table 1.5.2.3 (printed pp. 111–112), and the Shubnikov symbol of every
-classical subgroup equals that of the subgroup's own row. No operator and no generator changed, so
+classical subgroup equals that of the subgroup's own row. The ITC table is not transcribed in this
+repository; the comparison uses the transcription from page images in `manganite/symcrys`
+(`references/itc/vol-d-table-1.5.2.3.md`), where a test repeats it. No operator and no generator changed, so
 no tensor form depends on these entries.
 
 Book misprint found in the same pass (documentation only, no change):
@@ -336,7 +339,7 @@ Book misprint found in the same pass (documentation only, no change):
 - **2026-07-04** (birss-app `fd4f838`): Corrected `6'/mm'm` generator column σ(4)→σ(2), reversing the
   2026-07-02 pass-5 override; book scan re-verified 2026-07-04; see rewritten pass-5 note
   (evidence: Table 7 A=(-62m), (R_n), printed σ(2)).
-- **2026-11-20** (manganite/birss-tables#3): Book-scan verification of the Shubnikov columns (pass 6,
+- **2026-11-20** (PR #4): Book-scan verification of the Shubnikov columns (pass 6,
   above) corrected 7 entries in 6 rows: `4/mm'm'`, `4/m'mm`, `4'/m'm'm`, `6'/m'mm'`, `m'3m'`,
   `m'3m` (symbol and classical subgroup). Documented the book misprint in the operators of
   `4/m'mm`.

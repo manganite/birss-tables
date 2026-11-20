@@ -1032,5 +1032,5 @@ materials).
   bracket-spelling caveat (`(-4m2)` vs `(-42m)` for the identical group), and the methodological
   lesson that generator disputes must be arbitrated by Table 7's own parenthesization. All five
   documented book errors re-verified against maintainer book scans.
-- **2026-11-20** (manganite/birss-tables#3): Added the sixth documented book error, the operator
+- **2026-11-20** (PR #4): Added the sixth documented book error, the operator
   ±4̲_z printed for `4/m'mm` in Table 6 (correct: `±-4'_z`).
